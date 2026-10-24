@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Computer Lab Management System Details</title>
+        <link rel="stylesheet" href="static/detail.css">
+    </head>
+    <body>
+        {% csrf_token %}
+        <div class="scroll-container">
+            <div class="container">
+                <div class="column">
+                <h2>1. Lab Facilities</h2>
+                <img src="{% static 'facility.jpeg' %}" alt="Lab Facilities Image" class="medium-image">
+                <ul>
+                    <li>Number of computers</li>
+                    <li>Software installed</li>
+                    <li>Internet connectivity</li>
+                </ul>
+                <p>Describe the facilities available in the computer lab, such as the number of computers, software installed, internet connectivity etc.</p>
+            </div>
+            <div class="column">
+                <h2>2. Operating Hours</h2>
+                <img src="{% static 'clock.jpeg' %}" alt="Operating Hours Image" class="medium-image">
+                <ul>
+                    <li>Regular hours</li>
+                    <li>Special schedules</li>
+                    <li>Closures</li>
+                </ul>
+                <p>Provide information about the lab's operating hours, including any special schedules or closures.</p>
+            </div>
+            <div class="column">
+                <h2>3. Reservation System</h2>
+                <img src="{% static 'reserve1.jpeg' %}" alt="Reservation System Image" class="medium-image">
+                <ul>
+                    <li>Online portal</li>
+                    <li>In-person sign-up</li>
+                    <li>Other methods</li>
+                </ul>
+                <p>Explain how users can reserve lab slots, whether it's through an online portal, in-person sign-up, or other methods.</p>
+            </div>
+            <div class="column">
+                <h2>4. Rules and Policies</h2>
+                <img src="{% static 'facility.jpeg' %}"  alt="Rules and Policies Image" class="medium-image">
+                <ul>
+                    <li>No food or drinks allowed</li>
+                    <li>Quiet study areas designated</li>
+                    <li>Time limits for computer use enforced</li>
+                </ul>
+                <p>Outline any rules and policies users need to follow while using the lab, such as no food or drinks, quiet study areas, time limits for computer use, etc.</p>
+            </div>
+                <div class="column">
+                <h2>5. Security Measures</h2>
+                <img src="{% static 'security.jpeg' %}" alt="Security Measures Image" class="medium-image">
+                <ul>
+                    <li>Login requirements</li>
+                    <li>CCTV surveillance</li>
+                    <li>Antivirus software</li>
+                </ul>
+                <p>Highlight any security measures in place to protect users' data and equipment, such as login requirements, CCTV surveillance, or antivirus software.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

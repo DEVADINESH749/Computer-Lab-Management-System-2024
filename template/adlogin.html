@@ -1,0 +1,130 @@
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/login.css">
+</head>
+<body>
+    <center>
+        <form name="myform" action="{% url 'adlogin' %}" method="POST" onsubmit="validateForm()">
+            {% csrf_token %}
+            <div class="wrapper">
+                <div class="form-box">
+                    {% if messages %}
+                    <ul class="messages">
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
+                    <h2>Admin Login</h2>
+                    {{ form.as_p }}
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-li">
+                        <p>Don't have an account?<a href="{% url 'adreg' %}" class="login-link">Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </center>
+    <script src="{% static 'adminlgn.js' %}"></script>
+
+</body>
+</html> -->
+
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/login.css">
+</head>
+<body>
+    <center>
+        <form name="myform" action="{% url 'stlogin' %}" method="POST" onsubmit="validateForm()">
+            {% csrf_token %}
+            <div class="wrapper">
+                <div class="form-box">
+                    {% if messages %}
+                    <ul class="messages">
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
+                    <h2>Staff Login</h2>
+                    {{ form.as_p }}
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-li">
+                        <p>Don't have an account?<a href="{% url 'streg' %}" class="login-link">Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </center>
+    <script src="{% static 'app.js' %}"></script>
+
+</body>
+</html> -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminlogin</title>
+    <link rel="stylesheet" href="static/login.css">
+</head>
+<body>
+    <center>
+    <form name="myform" action="{% url 'adlogin' %}" method="POST" onsubmit="return validateForm()">
+        <div class="wrapper">
+            <div class="form-box">
+                <h2>Admin Login</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" value=""><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" value=""><br><br><br>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-li">
+                    <p>Don't have an account? <a href="{% url 'adreg' %}" class="login-link">AdminRegister</a></p>
+                    {% csrf_token %}
+                    {% if messages %}
+                    <ul class="messages">
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </form>
+    </center>
+    </body>
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+        
+            // Check if username or password is empty
+            if (username.trim() === "" || password.trim() === "") {
+                alert("Please enter both username and password.");
+                return false; // Prevent form submission
+            }
+        
+            // You can add more complex validation logic here if needed
+        
+            return true; // Allow form submission
+        }
+          
+    </script>
+</body>
+</html>
+

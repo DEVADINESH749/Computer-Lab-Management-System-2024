@@ -1,0 +1,35 @@
+{% load static %}
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title> 
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="stylesheet" href="{% static 'all.min.css' %}">
+   </head>
+<body>
+  {% csrf_token %}
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <h1>Computer Lab management🖥️ </h1>
+      </div>
+      <ul>
+        <li><a href="#">Notification</a></li>
+        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        <li><a href="{% url 'details' %}">Lab Details</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="img"></div>
+  <div class="center">
+    <div class="title">Computer</div>
+    <span>Lab management</span>
+    <div class="sub_title">System</div>
+    <div class="par">
+        <p>Software solution designed to effeciently manage and organize activites within computer lab environment.It facilitates reservation of lab slots,minimizing conflicts and maximizing user convenicence.</p>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
