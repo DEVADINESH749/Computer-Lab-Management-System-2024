@@ -90,8 +90,12 @@ Developed as part of my undergraduate academic project in 2024.
 
 This UG Final Year Project was developed collaboratively by:
 
-- Devarajan J.
-- J Ram Dinesh
-- S Renold Akash
+- Devarajan J
+- Ram Dinesh J
+- Renold Akash S
 
-We worked together on the design, development, testing, and documentation of the College Learning Management System.
+We worked together on the design, development, testing, and documentation of the Computer Lab Management System.
+
+Proud of what we created together and even more proud to have shared this journey with my close friends. ❤️
+
+Our first UG project, our memories, our teamwork, and a milestone we'll always be proud of. 🤝🎓
